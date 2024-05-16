@@ -1,0 +1,4 @@
+$Length = 500
+$Path = "random.txt"
+$RandomContent = -join ((65..90) + (97..122) + (48..57) | Get-Random -Count $Length | ForEach-Object {[char]$_})
+Set-Content -Path $Path -Value $RandomContent
